@@ -13,12 +13,12 @@ public class Manager_Situations : MonoBehaviour
     public GameObject Lanza1;
     public GameObject Lanza2;
 
-    public GameObject[] Activos;
+    public List<GameObject> Activos;
 
     // Update is called once per frame
     void Update()
     {
-        if(Activos.Length > 1)
+        if(Activos.Count > 1)
         {
             texto.text = "Estan en escena:\n" + Activos[0].gameObject.GetComponent<ImageTargetController>().TargetName
                     + "\n y \n" + Activos[1].gameObject.GetComponent<ImageTargetController>().TargetName;
@@ -30,5 +30,13 @@ public class Manager_Situations : MonoBehaviour
         }
     }
 
+    void AddActivo(GameObject _g)
+    {
+        Activos.Add(_g);
+    }
 
+    void RemoveActivo(GameObject _g)
+    {
+        Activos.Remove(_g);
+    }
 }
