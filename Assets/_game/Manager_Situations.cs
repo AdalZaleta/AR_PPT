@@ -15,6 +15,11 @@ public class Manager_Situations : MonoBehaviour
 
     public List<GameObject> Activos;
 
+    void Awake()
+    {
+        Activos = new List<GameObject>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -22,20 +27,29 @@ public class Manager_Situations : MonoBehaviour
         {
             texto.text = "Estan en escena:\n" + Activos[0].gameObject.GetComponent<ImageTargetController>().TargetName
                     + "\n y \n" + Activos[1].gameObject.GetComponent<ImageTargetController>().TargetName;
-            if (Vector3.Distance(Activos[0].transform.position, Activos[1].transform.position) < 1.0f)
+            if (Vector3.Distance(Activos[0].transform.position, Activos[1].transform.position) < 0.5f)
             {
                 texto.text = "ESTAN CERCA:\n" + Activos[0].gameObject.GetComponent<ImageTargetController>().TargetName
                     + "\n y \n" + Activos[1].gameObject.GetComponent<ImageTargetController>().TargetName;
             }
         }
+        else if(Activos.Count == 0)
+        {
+            texto.text = "No hay objetos En la escena";
+        }
+        else if(Activos.Count == 1)
+        {
+            texto.text = "Estan en escena:\n" + Activos[0].gameObject.GetComponent<ImageTargetController>().TargetName;
+        }
+        Debug.Log("Numero de Objetos Activos: " + Activos.Count);
     }
 
-    void AddActivo(GameObject _g)
+    public void AddActivo(GameObject _g)
     {
         Activos.Add(_g);
     }
 
-    void RemoveActivo(GameObject _g)
+    public void RemoveActivo(GameObject _g)
     {
         Activos.Remove(_g);
     }

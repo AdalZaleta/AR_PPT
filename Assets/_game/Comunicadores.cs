@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Comunicadores : MonoBehaviour
 {
+    public Manager_Situations ms;
     private void OnEnable()
     {
-        SendMessage("AddActivo", gameObject);
+        ms.AddActivo(gameObject);
     }
 
     private void OnDisable()
     {
-        SendMessage("RemoveActivo", gameObject);
+        ms.RemoveActivo(gameObject);
     }
 }
