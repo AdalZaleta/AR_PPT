@@ -25,12 +25,57 @@ public class Manager_Situations : MonoBehaviour
     {
         if(Activos.Count > 1)
         {
-            texto.text = "Estan en escena:\n" + Activos[0].gameObject.GetComponent<ImageTargetController>().TargetName
-                    + "\n y \n" + Activos[1].gameObject.GetComponent<ImageTargetController>().TargetName;
-            if (Vector3.Distance(Activos[0].transform.position, Activos[1].transform.position) < 0.5f)
+            texto.text = "Estan en escena:\n" + Activos[0].gameObject.GetComponent<Comunicadores>().type
+                    + "\n y \n" + Activos[1].gameObject.GetComponent<Comunicadores>().type;
+            if (Vector3.Distance(Activos[0].transform.position, Activos[1].transform.position) < 1.0f)
             {
-                texto.text = "ESTAN CERCA:\n" + Activos[0].gameObject.GetComponent<ImageTargetController>().TargetName
-                    + "\n y \n" + Activos[1].gameObject.GetComponent<ImageTargetController>().TargetName;
+                texto.text = "ESTAN CERCA:\n" + Activos[0].gameObject.GetComponent<Comunicadores>().type
+                    + "\n y \n" + Activos[1].gameObject.GetComponent<Comunicadores>().type;
+                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword &&
+                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword)
+                {
+                    //Empate
+                }
+                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword &&
+                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe)
+                {
+                    //Gana Espada
+                }
+                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword &&
+                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear)
+                {
+                    //Gana Lanza
+                }
+                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe &&
+                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword)
+                {
+                    //Gana Espada
+                }
+                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe &&
+                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe)
+                {
+                    //Empate
+                }
+                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe &&
+                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear)
+                {
+                    //Gana Hacha
+                }
+                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear &&
+                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword)
+                {
+                    //Gana Lanza
+                }
+                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear &&
+                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe)
+                {
+                    //Gana Hacha
+                }
+                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear &&
+                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear)
+                {
+                    //Empate
+                }
             }
         }
         else if(Activos.Count == 0)
@@ -39,7 +84,7 @@ public class Manager_Situations : MonoBehaviour
         }
         else if(Activos.Count == 1)
         {
-            texto.text = "Estan en escena:\n" + Activos[0].gameObject.GetComponent<ImageTargetController>().TargetName;
+            texto.text = "Estan en escena:\n" + Activos[0].gameObject.GetComponent<Comunicadores>().type;
         }
         Debug.Log("Numero de Objetos Activos: " + Activos.Count);
     }

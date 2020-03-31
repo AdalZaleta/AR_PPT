@@ -3,10 +3,10 @@ guid: bc799c7497a6b484b877ef2a207c094e
 ShaderImporter:
   externalObjects: {}
   defaultTextures:
-  - _MainTex: {fileID: 2800000, guid: 30d783e0ce661d242bd26e89e47b0d5a, type: 3}
+  - _MainTex: {fileID: 2800000, guid: 69912df1196b13e479bb1ac90022a17d, type: 3}
   - _Noise_Texture: {fileID: 2800000, guid: 28c7aad1372ff114b90d330f8a2dd938, type: 3}
   - _node_4963: {fileID: 2800000, guid: 303747783a3a84d45a7bacac95149dcd, type: 3}
-  - _MetallicTXT: {fileID: 2800000, guid: 6b898e5dfdf53b34c850d55cc3dfa45e, type: 3}
+  - _MetallicTXT: {fileID: 2800000, guid: 30ae8b9a1a8bcb84baa121d77b864e91, type: 3}
   nonModifiableTextures: []
   userData: 
   assetBundleName: 
