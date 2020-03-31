@@ -20,61 +20,77 @@ public class Manager_Situations : MonoBehaviour
         Activos = new List<GameObject>();
     }
 
+    Comunicadores com1, com2;
+
     // Update is called once per frame
     void Update()
     {
         if(Activos.Count > 1)
         {
-            texto.text = "Estan en escena:\n" + Activos[0].gameObject.GetComponent<Comunicadores>().type
-                    + "\n y \n" + Activos[1].gameObject.GetComponent<Comunicadores>().type;
+            com1 = Activos[0].gameObject.GetComponent<Comunicadores>();
+            com2 = Activos[1].gameObject.GetComponent<Comunicadores>();
+            texto.text = "Estan en escena:\n" + com1.type
+                    + "\n y \n" + com2.type;
             if (Vector3.Distance(Activos[0].transform.position, Activos[1].transform.position) < 1.0f)
             {
-                texto.text = "ESTAN CERCA:\n" + Activos[0].gameObject.GetComponent<Comunicadores>().type
-                    + "\n y \n" + Activos[1].gameObject.GetComponent<Comunicadores>().type;
-                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword &&
-                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword)
+                texto.text = "ESTAN CERCA:\n" + com1.type
+                    + "\n y \n" + com2.type;
+                if (com1.type == typeWeapon.Sword &&
+                    com2.type == typeWeapon.Sword)
                 {
                     //Empate
+                    com1.Disapear();
+                    com2.Disapear();
                 }
-                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword &&
-                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe)
+                if (com1.type == typeWeapon.Sword &&
+                    com2.type == typeWeapon.Axe)
                 {
                     //Gana Espada
+                    com2.Disapear();
                 }
-                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword &&
-                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear)
+                if (com1.type == typeWeapon.Sword &&
+                    com2.type == typeWeapon.Spear)
                 {
                     //Gana Lanza
+                    com1.Disapear();
                 }
-                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe &&
-                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword)
+                if (com1.type == typeWeapon.Axe &&
+                    com2.type == typeWeapon.Sword)
                 {
                     //Gana Espada
+                    com1.Disapear();
                 }
-                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe &&
-                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe)
+                if (com1.type == typeWeapon.Axe &&
+                    com2.type == typeWeapon.Axe)
                 {
                     //Empate
+                    com1.Disapear();
+                    com2.Disapear();
                 }
-                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe &&
-                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear)
+                if (com1.type == typeWeapon.Axe &&
+                    com2.type == typeWeapon.Spear)
                 {
                     //Gana Hacha
+                    com2.Disapear();
                 }
-                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear &&
-                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Sword)
+                if (com1.type == typeWeapon.Spear &&
+                    com2.type == typeWeapon.Sword)
                 {
                     //Gana Lanza
+                    com2.Disapear();
                 }
-                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear &&
-                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Axe)
+                if (com1.type == typeWeapon.Spear &&
+                    com2.type == typeWeapon.Axe)
                 {
                     //Gana Hacha
+                    com1.Disapear();
                 }
-                if (Activos[0].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear &&
-                    Activos[1].gameObject.GetComponent<Comunicadores>().type == typeWeapon.Spear)
+                if (com1.type == typeWeapon.Spear &&
+                    com2.type == typeWeapon.Spear)
                 {
                     //Empate
+                    com1.Disapear();
+                    com2.Disapear();
                 }
             }
         }
@@ -84,7 +100,7 @@ public class Manager_Situations : MonoBehaviour
         }
         else if(Activos.Count == 1)
         {
-            texto.text = "Estan en escena:\n" + Activos[0].gameObject.GetComponent<Comunicadores>().type;
+            texto.text = "Estan en escena:\n" + com1.type;
         }
         Debug.Log("Numero de Objetos Activos: " + Activos.Count);
     }

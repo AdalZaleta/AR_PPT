@@ -556,6 +556,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ms: {fileID: 633987600}
   type: 2
+  disapear: 0
+  mt: {fileID: 0}
 --- !u!1001 &612356098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1143,6 +1145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ms: {fileID: 633987600}
   type: 2
+  disapear: 0
+  mt: {fileID: 0}
 --- !u!1 &985154103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1338,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ms: {fileID: 633987600}
   type: 0
+  disapear: 0
+  mt: {fileID: 0}
 --- !u!1 &1114040580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,6 +1400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ms: {fileID: 633987600}
   type: 1
+  disapear: 0
+  mt: {fileID: 0}
 --- !u!1 &1172517182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,7 +1817,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c660bc95ad44d5d43912dca4ed80f474, type: 2}
+      objectReference: {fileID: 2100000, guid: df0a891da52f39548a6026c22d486907, type: 2}
     - target: {fileID: -927199367670048503, guid: b71a2ca3d8e58aa439e3b14484505939,
         type: 3}
       propertyPath: m_Name
@@ -1883,6 +1891,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ms: {fileID: 633987600}
   type: 0
+  disapear: 0
+  mt: {fileID: 0}
 --- !u!1 &1985308836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,6 +1953,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ms: {fileID: 633987600}
   type: 0
+  disapear: 0
+  mt: {fileID: 0}
 --- !u!1 &2073862087
 GameObject:
   m_ObjectHideFlags: 0
