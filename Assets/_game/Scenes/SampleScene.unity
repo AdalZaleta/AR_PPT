@@ -2346,7 +2346,7 @@ PrefabInstance:
     - target: {fileID: 9201338590721765889, guid: 1f842aa652db2cb47acd63e7a858004a,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9201338590961140378, guid: 1f842aa652db2cb47acd63e7a858004a,
         type: 3}
@@ -2356,7 +2356,7 @@ PrefabInstance:
     - target: {fileID: 9201338590961140580, guid: 1f842aa652db2cb47acd63e7a858004a,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9201338590961140581, guid: 1f842aa652db2cb47acd63e7a858004a,
         type: 3}
@@ -2416,17 +2416,17 @@ PrefabInstance:
     - target: {fileID: 9201338592289713368, guid: 1f842aa652db2cb47acd63e7a858004a,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9201338592440881594, guid: 1f842aa652db2cb47acd63e7a858004a,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9201338592568691214, guid: 1f842aa652db2cb47acd63e7a858004a,
         type: 3}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f842aa652db2cb47acd63e7a858004a, type: 3}
