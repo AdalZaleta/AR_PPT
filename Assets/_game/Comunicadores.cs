@@ -34,6 +34,7 @@ public class Comunicadores : MonoBehaviour
     {
         ms.RemoveActivo(gameObject);
         doOnce = true;
+        DOTween.RewindAll();
     }
 
     public void Disapear()
