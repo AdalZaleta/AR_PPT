@@ -25,7 +25,6 @@ public class Comunicadores : MonoBehaviour
 
     private void OnEnable()
     {
-        DOTween.To(() => disapear, x => disapear = x, 1, 2.0f).OnUpdate(() => { mt.SetFloat("_Noise_Slider", disapear); });
         ms.AddActivo(gameObject);
     }
 
@@ -37,6 +36,6 @@ public class Comunicadores : MonoBehaviour
     public void Disapear()
     {
         disapear = 0;
-        DOTween.To(() => disapear, x => disapear = x, 1, 2.0f).OnUpdate(() => { mt.SetFloat("_Noise_Slider", disapear); });
+        DOTween.To(() => disapear, x => disapear = x, 1, 5.0f).OnUpdate(() => { mt.SetFloat("_Noise_Slider", disapear); });
     }
 }
