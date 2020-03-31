@@ -44,6 +44,6 @@ public class Comunicadores : MonoBehaviour
             doOnce = false;
             ps.Play();
         }
-        DOTween.To(() => disapear, x => disapear = x, 1, 2.0f).OnUpdate(() => { mt.SetFloat("_Noise_Slider", disapear); });
+        DOTween.To(() => disapear, x => disapear = x, 1, 5.0f).OnUpdate(() => { mt.SetFloat("_Noise_Slider", disapear); });
     }
 }
