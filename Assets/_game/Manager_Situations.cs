@@ -31,7 +31,7 @@ public class Manager_Situations : MonoBehaviour
             com2 = Activos[1].gameObject.GetComponent<Comunicadores>();
             texto.text = "Estan en escena:\n" + com1.type
                     + "\n y \n" + com2.type;
-            if (Vector3.Distance(Activos[0].transform.position, Activos[1].transform.position) < 1.0f)
+            if (Vector3.Distance(Activos[0].transform.position, Activos[1].transform.position) < 5.0f)
             {
                 texto.text = "ESTAN CERCA:\n" + com1.type
                     + "\n y \n" + com2.type;
