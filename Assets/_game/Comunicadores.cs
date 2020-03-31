@@ -16,6 +16,7 @@ public class Comunicadores : MonoBehaviour
     public typeWeapon type;
     public float disapear;
     public Material mt;
+    public ParticleSystem ps;
 
     private void Start()
     {
@@ -36,6 +37,7 @@ public class Comunicadores : MonoBehaviour
     public void Disapear()
     {
         disapear = 0;
+        ps.Play();
         DOTween.To(() => disapear, x => disapear = x, 1, 5.0f).OnUpdate(() => { mt.SetFloat("_Noise_Slider", disapear); });
     }
 }
