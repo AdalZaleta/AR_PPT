@@ -557,7 +557,7 @@ MonoBehaviour:
   ms: {fileID: 633987600}
   type: 2
   disapear: 0
-  mt: {fileID: 0}
+  mt: {fileID: 2100000, guid: 22ab47ccc0669324a85130e8f0e504ed, type: 2}
 --- !u!1001 &612356098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   ms: {fileID: 633987600}
   type: 2
   disapear: 0
-  mt: {fileID: 0}
+  mt: {fileID: 2100000, guid: 431a7dbe0b6854e429acf4d2ce0c3f4d, type: 2}
 --- !u!1 &985154103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   ms: {fileID: 633987600}
   type: 0
   disapear: 0
-  mt: {fileID: 0}
+  mt: {fileID: 2100000, guid: 59fe5e52d1aab3649a59bc254033c4f5, type: 2}
 --- !u!1 &1114040580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1401,7 @@ MonoBehaviour:
   ms: {fileID: 633987600}
   type: 1
   disapear: 0
-  mt: {fileID: 0}
+  mt: {fileID: 2100000, guid: df0a891da52f39548a6026c22d486907, type: 2}
 --- !u!1 &1172517182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,7 +1892,7 @@ MonoBehaviour:
   ms: {fileID: 633987600}
   type: 0
   disapear: 0
-  mt: {fileID: 0}
+  mt: {fileID: 2100000, guid: 85bf6b91228fcaf47933e65ceee10b79, type: 2}
 --- !u!1 &1985308836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,7 +1954,7 @@ MonoBehaviour:
   ms: {fileID: 633987600}
   type: 0
   disapear: 0
-  mt: {fileID: 0}
+  mt: {fileID: 2100000, guid: 7e9e23d11873d2a4880b44d72b6b8922, type: 2}
 --- !u!1 &2073862087
 GameObject:
   m_ObjectHideFlags: 0
