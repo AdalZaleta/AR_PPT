@@ -25,10 +25,10 @@ public class Manager_Situations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Activos.Count > 1)
+        com1 ??= Activos[0].gameObject.GetComponent<Comunicadores>();
+        com2 ??= Activos[1].gameObject.GetComponent<Comunicadores>();
+        if (Activos.Count > 1)
         {
-            com1 = Activos[0].gameObject.GetComponent<Comunicadores>();
-            com2 = Activos[1].gameObject.GetComponent<Comunicadores>();
             texto.text = "Estan en escena:\n" + com1.type
                     + "\n y \n" + com2.type;
             if (Vector3.Distance(Activos[0].transform.position, Activos[1].transform.position) < 1.0f)
